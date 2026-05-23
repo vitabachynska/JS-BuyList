@@ -52,7 +52,6 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-
 .goods-item {
     display: flex;
     align-items: center;
@@ -63,17 +62,19 @@ body {
 .goods-name, .input-edit {
     flex: 1;
     font-weight: bold; 
-    width: 150px;
-}
-
-.item-bought .goods-name {
-    text-decoration: line-through;
-    color: #888888;
+    box-sizing: border-box;
 }
 
 .input-edit {
     padding: 5px;
     border: 1px solid #5cb85c;
+    margin: 0;
+    line-height: normal;
+}
+
+.item-bought .goods-name {
+    text-decoration: line-through;
+    color: #888888;
 }
 
 .quantity-controls {

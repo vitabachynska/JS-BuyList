@@ -7,73 +7,33 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
     <main class="container">
         <section class="main-panel">
-            <form class="add-item-form" onsubmit="event.preventDefault();">
+            <form class="add-item-form">
                 <input type="text" placeholder="Назва товару" aria-label="Назва товару" class="input-goods">
                 <button type="submit" class="btn-add" data-tooltip="Додати товар до списку">Додати</button>
             </form>
 
             <ul class="goods-list">
-                <li class="goods-item">
-                    <span class="goods-name">Помідори</span>
-                    <div class="quantity-controls">
-                        <span class="quantity-value">2</span>
-                    </div>
-                    <div class="item-actions">
-                        <button class="btn-status status-unbought" data-tooltip="Змінити">Не куплено</button>
-                    </div>
-                </li class="goods-item">
-
-                <li class="goods-item item-bought">
-                    <span class="goods-name">Печиво</span>
-                    <div class="quantity-controls">
-                        <button class="btn-count btn-minus" data-tooltip="Зменшити кількість" aria-label="Зменшити кількість">−</button>
-                        <span class="quantity-value">2</span>
-                        <button class="btn-count btn-plus" data-tooltip="Збільшити кількість" aria-label="Збільшити кількість">+</button>
-                    </div>
-                    <div class="item-actions">
-                        <button class="btn-status status-bought" data-tooltip="Змінити">Куплено</button>
-                        <button class="btn-delete" data-tooltip="Видалити товар" aria-label="Видалити товар">×</button>
-                    </div>
-                </li>
-
-                <li class="goods-item">
-                    <input type="text" value="Сир" class="input-edit" aria-label="Редагувати назву товару">
-                    <div class="quantity-controls">
-                        <button class="btn-count btn-minus disabled" data-tooltip="Зменшити кількість" aria-label="Зменшити кількість" disabled>−</button>
-                        <span class="quantity-value">1</span>
-                        <button class="btn-count btn-plus" data-tooltip="Збільшити кількість" aria-label="Збільшити кількість">+</button>
-                    </div>
-                    <div class="item-actions">
-                        <button class="btn-status status-bought" data-tooltip="Змінити">Куплено</button>
-                        <button class="btn-delete" data-tooltip="Видалити товар" aria-label="Видалити товар">×</button>
-                    </div>
-                </li>
-            </ul>
+			</ul>
         </section>
 
         <aside class="sidebar">
-            <div class="stats-block">
-                <h3>Залишилося</h3>
-                <div class="tags-container">
-                    <span class="tag">Печиво <span class="tag-count">2</span></span>
-                    <span class="tag">Сир <span class="tag-count">1</span></span>
-                </div>
-            </div>
-            
-            <div class="stats-block">
-                <h3>Куплено</h3>
-                <div class="tags-container">
-                    <span class="tag tag-crossed">Помідори <span class="tag-count">2</span></span>
-                </div>
-            </div>
-        </aside>
+			<template id="tag-template">
+				<span class="tag">
+					<span class="tag-name"></span> 
+					<span class="tag-count"></span>
+				</span>
+			</template>
+		</aside>
     </main>
 
-    <div class="badge"aria-label="Інформація про автора">
+    <div class="badge" aria-label="Інформація про автора">
         <div class="badge-front">Buy List</div>
         <div class="badge-back">Created by: <br><strong>Vitalina Bachynska</strong></div>
     </div>
+	
+    <script src="index.js"></script>
 </body>
 </html>
